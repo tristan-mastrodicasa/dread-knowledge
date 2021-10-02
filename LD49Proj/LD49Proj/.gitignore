@@ -73,3 +73,7 @@ crashlytics-build.properties
 # Hide PolygonFantasyKingdom assets
 /[Aa]ssets/PolygonFantasyKingdom/
 /[Aa]ssets/PolygonFantasyKingdom.meta
+
+# Hide NatureStarterKit2 assets
+/[Aa]ssets/NatureStarterKit2/
+/[Aa]ssets/NatureStarterKit2.meta
