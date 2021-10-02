@@ -9,6 +9,12 @@ public class DraggableName : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
 
     public RoleSlot currentSlot;
 
+    public Character character;
+
+
+
+
+
     private Canvas canvas;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;

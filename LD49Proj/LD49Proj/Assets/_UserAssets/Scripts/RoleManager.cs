@@ -4,7 +4,20 @@ using UnityEngine;
 
 public class RoleManager : MonoBehaviour
 {
-    public List<RoleSlot> roleSlots;
+
+    public enum Roles {Sleep, Guard, Heal}
+
+    public List<DraggableName> draggableNames;
+
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Return)){
+            Debug.Log("Roles:");
+
+            
+        }
+    }
+    
 
     
 }
