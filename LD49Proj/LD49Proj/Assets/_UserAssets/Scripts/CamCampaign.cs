@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class CamCampaign : MonoBehaviour
 {
@@ -11,6 +13,9 @@ public class CamCampaign : MonoBehaviour
     private void Awake() {
         daisTransform = GameObject.Find("Dais").transform;
         cameraPivot = GameObject.Find("Camera Pivot").transform;
+
+        postProcessVol = GetComponentInChildren<Volume>();
+        postProcessVol.profile.TryGet<DepthOfField>(out dof);
     }
 
 
@@ -57,5 +62,44 @@ public class CamCampaign : MonoBehaviour
 
         Camera.main.transform.rotation = Quaternion.Lerp(zoomedOutRot, zoomedInRot, zoomAmount);
 
+
+        //SetDepthOfField();
+
+    }
+
+
+    private Volume postProcessVol;
+    private DepthOfField dof;
+
+    public float zoomedOutFocalDistance = 15f;
+
+    public float zoomedOutFocalLength = 30f;
+    public float zoomedInFocalLength = 150f;
+
+    public float zoomedOutAperture = 3f;
+    public float zoomedInAperture = 1.5f;
+
+
+    void SetDepthOfField(){
+
+        float distanceFromGroup = Vector3.Distance(daisTransform.position, Camera.main.transform.position);
+
+        float focalDistance = Mathf.Lerp(zoomedOutFocalDistance, distanceFromGroup, zoomAmount);
+
+        float focalLength = Mathf.Lerp(zoomedOutFocalLength, zoomedInFocalLength, zoomAmount);
+        
+        float aperture = Mathf.Lerp(zoomedOutAperture, zoomedInAperture, zoomAmount);
+
+
+
+
+
+        dof.focusDistance = new MinFloatParameter(focalDistance, 0f, true);
+        dof.focalLength = new ClampedFloatParameter(focalLength, 0f, 300f, true);
+        dof.aperture = new ClampedFloatParameter(aperture, 1f, 32f, true);
+
+        postProcessVol.profile.TryGet<DepthOfField>(out dof);
+
+        Debug.Log(dof.focusDistance + ", " + dof.focalLength + ", " + dof.aperture);
     }
 }
