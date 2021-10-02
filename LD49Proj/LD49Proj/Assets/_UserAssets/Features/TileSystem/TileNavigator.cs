@@ -5,6 +5,8 @@ using UnityEngine;
 namespace TileSystem {
     public class TileNavigator : MonoBehaviour
     {
+        public float moveSpeed = 3f;
+
         public Tile currentTile;
         int tilesToMoveForward = 0;
 
@@ -25,7 +27,7 @@ namespace TileSystem {
                         tilesToMoveForward--;
                         currentTile = currentTile.nextTile;
                     } else {
-                        transform.position = Vector3.MoveTowards(transform.position, positionOfNextTilesAnchor, 1f * Time.deltaTime);
+                        transform.position = Vector3.MoveTowards(transform.position, positionOfNextTilesAnchor, moveSpeed * Time.deltaTime);
                     }
                 } else {
                     Debug.Log("End");
