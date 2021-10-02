@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace TileSystem {
     public class TileNavigator : MonoBehaviour
@@ -28,8 +29,8 @@ namespace TileSystem {
                         transform.position = Vector3.MoveTowards(transform.position, positionOfNextTilesAnchor, 1f * Time.deltaTime);
                     }
                 } else {
-                    Debug.Log("End");
                     tilesToMoveForward = 0;
+                    SceneManager.LoadScene("EndGame", LoadSceneMode.Single);
                 }
             } 
             if (Input.GetKeyDown(KeyCode.Return)){
