@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TileSystem;
 
-public class GameManager : MonoBehaviour
+public class TileGameManager : MonoBehaviour
 {
     public TileNavigator dias;
     public DiceRoll diceRoll;

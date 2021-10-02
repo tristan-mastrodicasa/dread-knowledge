@@ -8,8 +8,6 @@ public class CampaignManager : MonoBehaviour
 
     public void PopulateDeis(){
         for(int i = 0; i < 6; i++){
-
-            Debug.Log(GameManager.GetCharacters());
             
             if ( i >= GameManager.GetCharacters().Count ){
                 spots[i].ShowCharacter(null);
