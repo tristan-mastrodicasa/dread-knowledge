@@ -775,6 +775,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   draggableNames: []
+  spots:
+  - {fileID: 934476307}
+  - {fileID: 1472404039}
+  - {fileID: 1197228465}
+  - {fileID: 1656676250}
+  - {fileID: 2145282542}
+  - {fileID: 1535350218}
 --- !u!1 &483680560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,6 +1222,77 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &789506986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 789506988}
+  - component: {fileID: 789506987}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &789506987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789506986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e479d8f1827262d4ab7b418800feecf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currNameIndex: 0
+  characterNamesList:
+  - Alpha
+  - Bravo
+  - Charlie
+  - Delta
+  - Echo
+  - Foxtrot
+  - Golf
+  - Hotel
+  - India
+  - Juliet
+  - Kilo
+  - Lima
+  - Mike
+  - November
+  - Oscar
+  - Papa
+  - Quebec
+  - Romeo
+  - Sierra
+  - Tango
+  - Uniform
+  - Victor
+  - Whiskey
+  - Xray
+  - Yankee
+  - Zulu
+--- !u!4 &789506988
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789506986}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &846489915 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3947872005820139834, guid: b296d816cc1803e4ab433dad81756a8e, type: 3}
@@ -1239,6 +1317,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 934476306}
+  - component: {fileID: 934476307}
   m_Layer: 0
   m_Name: Spot 1
   m_TagString: Untagged
@@ -1261,6 +1340,18 @@ Transform:
   m_Father: {fileID: 300803002}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -140, z: 0}
+--- !u!114 &934476307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934476305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82df3975ba15461408017518bec626cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &938656181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1736,6 +1827,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1197228464}
+  - component: {fileID: 1197228465}
   m_Layer: 0
   m_Name: Spot 3
   m_TagString: Untagged
@@ -1758,6 +1850,18 @@ Transform:
   m_Father: {fileID: 300803002}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -158.487, z: 0}
+--- !u!114 &1197228465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197228463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82df3975ba15461408017518bec626cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1200894902
 GameObject:
   m_ObjectHideFlags: 0
@@ -2250,6 +2354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1472404038}
+  - component: {fileID: 1472404039}
   m_Layer: 0
   m_Name: Spot 2
   m_TagString: Untagged
@@ -2272,6 +2377,18 @@ Transform:
   m_Father: {fileID: 300803002}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -122.568, z: 0}
+--- !u!114 &1472404039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472404037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82df3975ba15461408017518bec626cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1488505332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2412,6 +2529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1535350217}
+  - component: {fileID: 1535350218}
   m_Layer: 0
   m_Name: Spot 6
   m_TagString: Untagged
@@ -2434,6 +2552,18 @@ Transform:
   m_Father: {fileID: 300803002}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -92.404, z: 0}
+--- !u!114 &1535350218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535350216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82df3975ba15461408017518bec626cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1578982801 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8521435397615932933, guid: 02b1f43809f40374aa2ddc13c2becb47, type: 3}
@@ -2527,6 +2657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1656676249}
+  - component: {fileID: 1656676250}
   m_Layer: 0
   m_Name: Spot 4
   m_TagString: Untagged
@@ -2549,6 +2680,18 @@ Transform:
   m_Father: {fileID: 300803002}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -113.978, z: 0}
+--- !u!114 &1656676250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656676248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82df3975ba15461408017518bec626cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1663609542 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8521435397615932933, guid: 02b1f43809f40374aa2ddc13c2becb47, type: 3}
@@ -3787,6 +3930,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2145282541}
+  - component: {fileID: 2145282542}
   m_Layer: 0
   m_Name: Spot 5
   m_TagString: Untagged
@@ -3809,6 +3953,18 @@ Transform:
   m_Father: {fileID: 300803002}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -173.467, z: 0}
+--- !u!114 &2145282542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145282540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82df3975ba15461408017518bec626cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &16722427500389562
 GameObject:
   m_ObjectHideFlags: 0
