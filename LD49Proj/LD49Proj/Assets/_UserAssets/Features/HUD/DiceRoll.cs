@@ -16,10 +16,10 @@ public class DiceRoll : MonoBehaviour
     //
     // Summary:
     //     Returns a dice roll and starts the animation
-    public void RollDice() {
+    public int RollDice() {
         int roll = Random.Range(1, 6);
         SimulateDiceRoll(roll);
-        // return roll;
+        return roll;
     }
 
     //
