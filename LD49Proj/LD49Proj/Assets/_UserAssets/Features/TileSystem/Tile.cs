@@ -7,5 +7,9 @@ namespace TileSystem {
     {
         public Tile nextTile;
         public TileAnchor tileAnchor;
+
+        public TileAnchor tileTypeIconAnchor;
+
+        public TileManager.TileType tileType;
     }
 }

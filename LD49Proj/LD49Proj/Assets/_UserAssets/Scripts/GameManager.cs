@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
 
             InitializeCharacters();
+            InitializeTileTypes();
         }
         else {
             Destroy(this);
@@ -53,6 +54,41 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void InitializeTileTypes(){
+        List<TileSystem.Tile> tiles = TileManager.instance.tiles;
+        tileTypeList = new List<TileManager.TileType>();
+        
+        for (int i = 0; i < tiles.Count; i++){
+            if (i == 0 || i == tiles.Count - 1){
+                tileTypeList.Add(TileManager.TileType.Normal);
+                continue;
+            }
+
+            // Randomly determine what kind of tile should be generated.
+            int roll = Random.Range(0, 8);
+            if (roll < 4){tileTypeList.Add(TileManager.TileType.Normal);}
+            else if (roll == 4){tileTypeList.Add(TileManager.TileType.Forest);}
+            else if (roll == 5){tileTypeList.Add(TileManager.TileType.Treasure);}
+            else if (roll == 6){tileTypeList.Add(TileManager.TileType.Monsters);}
+            else if (roll == 7){tileTypeList.Add(TileManager.TileType.Aberration);}
+
+        }
+    }
+
+    public static List<TileManager.TileType> GetTileTypes(){
+        return instance.tileTypeList;
+    }
+
+
+    // This function returns the type of tile the party is currently on.
+    // This can and should be used in the Tactical Scene as well.
+    public static TileManager.TileType GetCurrTileType(){
+        return instance.tileTypeList[instance.currTile];
+    }
+
+
+
+
 
     public static void AdvanceTiles(int number){
         instance.currTile += number;
@@ -68,6 +104,8 @@ public class GameManager : MonoBehaviour
         instance.deadCharacters.Add(character);
     }
 
+    
+
 
     //
     //
@@ -82,6 +120,8 @@ public class GameManager : MonoBehaviour
 
     // Current tile index.
     public int currTile = 0;
+    // Board tile types.
+    public List<TileManager.TileType> tileTypeList;
 
     // Name index for getting randomized names.
     public int currNameIndex = 0;

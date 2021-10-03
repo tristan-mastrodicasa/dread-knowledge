@@ -35,6 +35,7 @@ public class CampaignManager : MonoBehaviour
     private void Start() {
         PopulateDeis();
         MoveDeisToCurrTile();
+        TileManager.PopulateGameTiles();
     }
 
     public void ReturnToTactical(){
