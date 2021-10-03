@@ -74,12 +74,18 @@ crashlytics-build.properties
 /[Aa]ssets/PolygonFantasyKingdom/
 /[Aa]ssets/PolygonFantasyKingdom.meta
 
-# Hide PolygonFantasyKingdom assets
 # Hide NatureStarterKit2 assets
 /[Aa]ssets/NatureStarterKit2/
 /[Aa]ssets/NatureStarterKit2.meta
 
+# Hide Magic Spells Sound Effects V2.0 assets
+/[Aa]ssets/Magic Spells Sound Effects V2.0/
+/[Aa]ssets/Magic Spells Sound Effects V2.0.meta
 
-# Hide icon assets
-/[Aa]ssets/CleanFlatIcon/
-/[Aa]ssets/CleanFlatIcon.meta
+# Hide Medieval Combat Sounds assets
+/[Aa]ssets/Medieval Combat Sounds/
+/[Aa]ssets/Medieval Combat Sounds.meta
+
+# Hide Footstep Sounds assets
+/[Aa]ssets/Footstep Sounds/
+/[Aa]ssets/Footstep Sounds.meta
