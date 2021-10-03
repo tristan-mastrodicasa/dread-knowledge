@@ -1445,6 +1445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currTile: 0
+  tileTypeList: 
   currNameIndex: 0
   characterNamesList:
   - Alpha
@@ -4046,7 +4047,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.5566038, g: 0.36389852, b: 0.19778684, a: 1}
   m_Intensity: 2.5
   m_Range: 104.77
   m_SpotAngle: 30
