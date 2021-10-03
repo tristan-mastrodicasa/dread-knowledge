@@ -48,6 +48,8 @@ public class GameManager : MonoBehaviour
             Character newChar = new Character(GetName(), Random.Range(0, 22), 6, 6);
             characters.Add(newChar);
         }
+
+        deadCharacters = new List<Character>();
         
     }
 
@@ -60,23 +62,37 @@ public class GameManager : MonoBehaviour
     }
 
 
+    public static void KillCharacter(Character character){
+        instance.characters.Remove(character);
+
+        instance.deadCharacters.Add(character);
+    }
+
 
     //
+    //
     // GAME STATE
+    //
     //
 
 
     // Ordered list of all characters.
     public List<Character> characters;
-
+    public List<Character> deadCharacters;
 
     // Current tile index.
     public int currTile = 0;
 
-    
-
     // Name index for getting randomized names.
     public int currNameIndex = 0;
+
+
+
+    //
+    //
+    // END GAME STATE
+    //
+    //
 
 
 
@@ -95,7 +111,11 @@ public class Character {
         modelIndex = model;
         this.sanity = sanity;
         this.health = health;
+
+        isAlive = true;
     }
+
+    public bool isAlive;
 
     // Name
     public string characterName;
@@ -106,8 +126,44 @@ public class Character {
     // 1-6 scale
     public int sanity;
 
+    public void ChangeSanity(int difference){
+        if (!isAlive){return;}
+
+        sanity = Mathf.Min(sanity + difference, 6);
+
+        while (sanity <= 0){
+            AttackOthers();
+            sanity++;
+        }
+    }
+
+    public void AttackOthers(){
+        if (!isAlive){return;}
+
+        GameManager.GetCharacters()[Random.Range(0,GameManager.GetCharacters().Count)].ChangeHealth(-2);
+    }
+
+
+
     // 1-6 scale
     public int health;
+
+
+
+    public void ChangeHealth(int difference){
+        if (!isAlive){return;}
+
+        health = Mathf.Clamp(health + difference, 0, 6);
+
+        if (health <= 0){
+            Die();
+        }
+    }
+
+    public void Die(){
+        isAlive = false;
+        GameManager.KillCharacter(this);
+    }
 
 
 }
