@@ -74,10 +74,10 @@ crashlytics-build.properties
 /[Aa]ssets/PolygonFantasyKingdom/
 /[Aa]ssets/PolygonFantasyKingdom.meta
 
-<<<<<<< HEAD
 # Hide PolygonFantasyKingdom assets
-=======
 # Hide NatureStarterKit2 assets
->>>>>>> feat-start-and-end-game
 /[Aa]ssets/NatureStarterKit2/
 /[Aa]ssets/NatureStarterKit2.meta
+
+/[Aa]ssets/CleanFlatIcon/
+/[Aa]ssets/CleanFlatIcon.meta
