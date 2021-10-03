@@ -102,6 +102,10 @@ public class GameManager : MonoBehaviour
         instance.characters.Remove(character);
 
         instance.deadCharacters.Add(character);
+
+        if (instance.characters.Count == 0) {
+            SceneManager.LoadScene("DefeatedScene");
+        }
     }
 
     
