@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,6 +28,14 @@ public class GameManager : MonoBehaviour
 
     public static List<Character> GetCharacters(){
         return instance.characters;
+    }
+
+    public static void LoadCampaignScene(){
+        SceneManager.LoadScene("Overworld");
+    }
+
+    public static void LoadTacticalScene(){
+        SceneManager.LoadScene("TacticalMap");
     }
 
     // Ordered list of all characters.

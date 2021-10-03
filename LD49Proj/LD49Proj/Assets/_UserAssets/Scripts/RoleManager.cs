@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoleManager : MonoBehaviour
 {
@@ -8,9 +9,10 @@ public class RoleManager : MonoBehaviour
     public enum Roles {Sleep, Guard, Heal}
 
     public List<DraggableName> draggableNames;
-
-
+    public List<RoleSlot> roleSlots;
     public List<TacSpotManager> spots;
+
+
     public void PopulateSpots(){
         for(int i = 0; i < 6; i++){
             
@@ -24,18 +26,36 @@ public class RoleManager : MonoBehaviour
         }
     }
 
+    public void SetUpNameAndSleepSlots(){
+        for(int i = 0; i < 6; i++){
 
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.Return)){
-            Debug.Log("Roles:");
+            if ( i >= GameManager.GetCharacters().Count ){
 
-            
+                draggableNames[i].gameObject.SetActive(false);
+
+                roleSlots[i].gameObject.SetActive(false);
+                continue;
+            }
+
+            draggableNames[i].GetComponentInChildren<Text>().text = GameManager.GetCharacters()[i].characterName;
+            draggableNames[i].character = GameManager.GetCharacters()[i];
+
+            roleSlots[i].character = GameManager.GetCharacters()[i];
+
         }
     }
 
 
     private void Start() {
         PopulateSpots();
+        SetUpNameAndSleepSlots();
+    }
+
+    
+
+
+    public void ReturnToCampaign(){
+        GameManager.LoadCampaignScene();
     }
     
 
