@@ -11,12 +11,12 @@ public class TileManager : MonoBehaviour
         instance = this;
     }
 
-    public static List<Tile> GetTiles(){
+    public static List<TileSystem.Tile> GetTiles(){
         return instance.tiles;
     }
 
 
 
     // List of all tiles in order.
-    public List<Tile> tiles;
+    public List<TileSystem.Tile> tiles;
 }

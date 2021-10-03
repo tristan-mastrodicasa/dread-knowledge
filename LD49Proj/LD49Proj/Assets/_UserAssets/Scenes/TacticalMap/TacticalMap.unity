@@ -8403,7 +8403,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2257002896422279968}
-  - component: {fileID: 7815203298209409275}
   - component: {fileID: 1967156816818998576}
   m_Layer: 0
   m_Name: FantasyKingdom_Characters (5)
@@ -8421,7 +8420,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2257002895992351684}
-  - component: {fileID: 7815203298119145503}
   - component: {fileID: 1967156816636673492}
   m_Layer: 0
   m_Name: FantasyKingdom_Characters (4)
@@ -8439,7 +8437,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2257002896819845983}
-  - component: {fileID: 7815203297828391044}
   - component: {fileID: 1967156817427590479}
   m_Layer: 0
   m_Name: FantasyKingdom_Characters (1)
@@ -8457,7 +8454,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2257002896618269704}
-  - component: {fileID: 7815203297493065683}
   - component: {fileID: 1967156817227069976}
   m_Layer: 0
   m_Name: FantasyKingdom_Characters (3)
@@ -8475,7 +8471,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2257002897204095485}
-  - component: {fileID: 7815203299054590502}
   - component: {fileID: 1967156815432761325}
   m_Layer: 0
   m_Name: FantasyKingdom_Characters
@@ -8493,7 +8488,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2257002897069459782}
-  - component: {fileID: 7815203299189521053}
   - component: {fileID: 1967156815567347542}
   m_Layer: 0
   m_Name: FantasyKingdom_Characters (2)
@@ -29067,78 +29061,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7815203297493065683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448378428436117170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bfb11000b674f34d99ff163703db642, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7815203297828391044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448378428100780517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bfb11000b674f34d99ff163703db642, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7815203298119145503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448378427812262270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bfb11000b674f34d99ff163703db642, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7815203298209409275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448378427390771610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bfb11000b674f34d99ff163703db642, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7815203299054590502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448378428755604295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bfb11000b674f34d99ff163703db642, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7815203299189521053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448378428891468796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bfb11000b674f34d99ff163703db642, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7839479112572883897
 GameObject:
   m_ObjectHideFlags: 0

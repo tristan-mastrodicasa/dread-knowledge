@@ -23,8 +23,10 @@ public class PartyManager : MonoBehaviour
     public float movementSpeed = 2f;
 
     private void Update() {
+        /*
         daisTransform.position = Vector3.MoveTowards(daisTransform.position,
                 TileManager.GetTiles()[currTile].GetDaisPosition(), movementSpeed * Time.deltaTime);
+        */
         
 
         if (Input.GetKeyDown(KeyCode.Return)){

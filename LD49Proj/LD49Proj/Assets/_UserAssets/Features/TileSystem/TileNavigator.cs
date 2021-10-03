@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 namespace TileSystem {
     public class TileNavigator : MonoBehaviour
@@ -15,8 +16,13 @@ namespace TileSystem {
             transform.position = currentTile.tileAnchor.transform.position;
         }
 
+
+        private bool isAdvancing = false;
+
         public void MoveForward(int numberOfTilesForward) {
+            isAdvancing = true;
             tilesToMoveForward += numberOfTilesForward;
+            GameManager.AdvanceTiles(numberOfTilesForward);
         }
 
         void Update() {
@@ -34,10 +40,21 @@ namespace TileSystem {
                     tilesToMoveForward = 0;
                     SceneManager.LoadScene("EndGame", LoadSceneMode.Single);
                 }
-            } 
-            if (Input.GetKeyDown(KeyCode.Return)){
-                MoveForward(1);
             }
+            else {
+                if (isAdvancing){
+                    isAdvancing = false;
+                    FinishedAdvancing();
+                }
+            }
+
         }
+
+        public UnityEvent onFinishedAdvancing;
+
+        public void FinishedAdvancing(){
+            onFinishedAdvancing.Invoke();
+        }
+
     }
 }

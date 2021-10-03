@@ -5,15 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/_UserAssets/Scenes/StartMenu/StartMenu.unity
     guid: a0e9f40e030a5334bbd970c6c4428613
   - enabled: 1
     path: Assets/_UserAssets/Scenes/Overworld.unity
     guid: 5abffa52f70eb5c448067f93e59b560f
+  - enabled: 1
+    path: Assets/_UserAssets/Scenes/TacticalMap/TacticalMap.unity
+    guid: 7c4e4401a0f610c4b887312aba2e8fd0
   - enabled: 1
     path: Assets/_UserAssets/Scenes/EndGame/EndGame.unity
     guid: 9cfb477cdc02e834eba0f56ecc11ec34

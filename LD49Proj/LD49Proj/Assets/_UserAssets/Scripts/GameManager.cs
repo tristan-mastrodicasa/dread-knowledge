@@ -38,8 +38,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("TacticalMap");
     }
 
-    // Ordered list of all characters.
-    public List<Character> characters;
+
 
     public void InitializeCharacters(){
 
@@ -53,7 +52,34 @@ public class GameManager : MonoBehaviour
     }
 
 
+    public static void AdvanceTiles(int number){
+        instance.currTile += number;
+    }
+    public static int GetTileIndex(){
+        return instance.currTile;
+    }
+
+
+
+    //
+    // GAME STATE
+    //
+
+
+    // Ordered list of all characters.
+    public List<Character> characters;
+
+
+    // Current tile index.
+    public int currTile = 0;
+
+    
+
+    // Name index for getting randomized names.
     public int currNameIndex = 0;
+
+
+
     public List<string> characterNamesList;
     public string GetName(){
         string name = characterNamesList[currNameIndex];
