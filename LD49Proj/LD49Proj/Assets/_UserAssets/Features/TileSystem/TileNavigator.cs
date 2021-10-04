@@ -38,7 +38,9 @@ namespace TileSystem {
                     }
                 } else {
                     tilesToMoveForward = 0;
-                    SceneManager.LoadScene("EndGame", LoadSceneMode.Single);
+
+                    GameManager.DetermineIfWon();
+                    FadeIn.FadeToScene("EndGame");
                 }
             }
             else {

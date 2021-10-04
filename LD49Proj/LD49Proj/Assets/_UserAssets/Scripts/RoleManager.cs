@@ -13,7 +13,7 @@ public class RoleManager : MonoBehaviour
 
 
 
-    public enum Roles {Sleep, Guard, Heal, Meditate}
+    public enum Roles {Sleep, Guard, Heal, Meditate, Loot}
 
     public List<DraggableName> draggableNames;
     public List<RoleSlot> roleSlots;
@@ -201,6 +201,17 @@ public class RoleManager : MonoBehaviour
                         StartCoroutine(HandleInsanity(d.character));
                         while (d.character.sanity < 1){yield return null;}
                     }
+
+                    break;
+                
+                case Roles.Loot:
+                    int heal = Random.Range(1, 5);
+                    ChangeHealth(d.character, heal);
+                    yield return new WaitForSeconds(2f);
+
+                    int sanityHeal = Random.Range(1, 5);
+                    ChangeSanity(d.character, sanityHeal);
+                    yield return new WaitForSeconds(2f);
 
                     break;
 

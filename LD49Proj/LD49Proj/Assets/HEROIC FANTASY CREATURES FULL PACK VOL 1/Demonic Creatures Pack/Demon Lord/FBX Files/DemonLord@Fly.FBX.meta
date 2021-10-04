@@ -1,0 +1,306 @@
+fileFormatVersion: 2
+guid: 1e5a3ad8f38985640b022ed869c04285
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: DEMON_LORD_
+    100002: DEMON_LORD_ Head
+    100004: DEMON_LORD_ L Calf
+    100006: DEMON_LORD_ L Clavicle
+    100008: DEMON_LORD_ L Finger0
+    100010: DEMON_LORD_ L Finger01
+    100012: DEMON_LORD_ L Finger02
+    100014: DEMON_LORD_ L Finger1
+    100016: DEMON_LORD_ L Finger11
+    100018: DEMON_LORD_ L Finger12
+    100020: DEMON_LORD_ L Finger2
+    100022: DEMON_LORD_ L Finger21
+    100024: DEMON_LORD_ L Finger22
+    100026: DEMON_LORD_ L Finger3
+    100028: DEMON_LORD_ L Finger31
+    100030: DEMON_LORD_ L Finger32
+    100032: DEMON_LORD_ L Foot
+    100034: DEMON_LORD_ L Forearm
+    100036: DEMON_LORD_ L Hand
+    100038: DEMON_LORD_ L HorseLink
+    100040: DEMON_LORD_ L Thigh
+    100042: DEMON_LORD_ L Toe0
+    100044: DEMON_LORD_ L Toe01
+    100046: DEMON_LORD_ L UpperArm
+    100048: DEMON_LORD_ Neck
+    100050: DEMON_LORD_ Neck1
+    100052: DEMON_LORD_ Pelvis
+    100054: DEMON_LORD_ Ponytail1
+    100056: DEMON_LORD_ R Calf
+    100058: DEMON_LORD_ R Clavicle
+    100060: DEMON_LORD_ R Finger0
+    100062: DEMON_LORD_ R Finger01
+    100064: DEMON_LORD_ R Finger02
+    100066: DEMON_LORD_ R Finger1
+    100068: DEMON_LORD_ R Finger11
+    100070: DEMON_LORD_ R Finger12
+    100072: DEMON_LORD_ R Finger2
+    100074: DEMON_LORD_ R Finger21
+    100076: DEMON_LORD_ R Finger22
+    100078: DEMON_LORD_ R Finger3
+    100080: DEMON_LORD_ R Finger31
+    100082: DEMON_LORD_ R Finger32
+    100084: DEMON_LORD_ R Foot
+    100086: DEMON_LORD_ R Forearm
+    100088: DEMON_LORD_ R Hand
+    100090: DEMON_LORD_ R HorseLink
+    100092: DEMON_LORD_ R Thigh
+    100094: DEMON_LORD_ R Toe0
+    100096: DEMON_LORD_ R Toe01
+    100098: DEMON_LORD_ R UpperArm
+    100100: DEMON_LORD_ Spine
+    100102: DEMON_LORD_ Spine1
+    100104: DEMON_LORD_ Spine2
+    100106: DEMON_LORD_SWORD
+    100108: DEMON_LORD_WHIP_01
+    100110: DEMON_LORD_WHIP_010
+    100112: DEMON_LORD_WHIP_011
+    100114: DEMON_LORD_WHIP_02
+    100116: DEMON_LORD_WHIP_03
+    100118: DEMON_LORD_WHIP_04
+    100120: DEMON_LORD_WHIP_05
+    100122: DEMON_LORD_WHIP_06
+    100124: DEMON_LORD_WHIP_07
+    100126: DEMON_LORD_WHIP_08
+    100128: DEMON_LORD_WHIP_09
+    100130: DEMON_LORD_WHIP_HANDLE
+    100132: DEMON_LORD_WING_L_ARM
+    100134: DEMON_LORD_WING_L_FINGER_A_1
+    100136: DEMON_LORD_WING_L_FINGER_A_2
+    100138: DEMON_LORD_WING_L_FINGER_A_3
+    100140: DEMON_LORD_WING_L_FINGER_B_1
+    100142: DEMON_LORD_WING_L_FINGER_B_2
+    100144: DEMON_LORD_WING_L_FINGER_B_3
+    100146: DEMON_LORD_WING_L_FINGER_C_1
+    100148: DEMON_LORD_WING_L_FINGER_C_2
+    100150: DEMON_LORD_WING_L_FINGER_C_3
+    100152: DEMON_LORD_WING_L_FOREARM
+    100154: DEMON_LORD_WING_L_HAND
+    100156: DEMON_LORD_WING_R_ARM
+    100158: DEMON_LORD_WING_R_FINGER_A_1
+    100160: DEMON_LORD_WING_R_FINGER_A_2
+    100162: DEMON_LORD_WING_R_FINGER_A_3
+    100164: DEMON_LORD_WING_R_FINGER_B_1
+    100166: DEMON_LORD_WING_R_FINGER_B_2
+    100168: DEMON_LORD_WING_R_FINGER_B_3
+    100170: DEMON_LORD_WING_R_FINGER_C_1
+    100172: DEMON_LORD_WING_R_FINGER_C_2
+    100174: DEMON_LORD_WING_R_FINGER_C_3
+    100176: DEMON_LORD_WING_R_FOREARM
+    100178: DEMON_LORD_WING_R_HAND
+    100180: //RootNode
+    100182: root
+    400000: DEMON_LORD_
+    400002: DEMON_LORD_ Head
+    400004: DEMON_LORD_ L Calf
+    400006: DEMON_LORD_ L Clavicle
+    400008: DEMON_LORD_ L Finger0
+    400010: DEMON_LORD_ L Finger01
+    400012: DEMON_LORD_ L Finger02
+    400014: DEMON_LORD_ L Finger1
+    400016: DEMON_LORD_ L Finger11
+    400018: DEMON_LORD_ L Finger12
+    400020: DEMON_LORD_ L Finger2
+    400022: DEMON_LORD_ L Finger21
+    400024: DEMON_LORD_ L Finger22
+    400026: DEMON_LORD_ L Finger3
+    400028: DEMON_LORD_ L Finger31
+    400030: DEMON_LORD_ L Finger32
+    400032: DEMON_LORD_ L Foot
+    400034: DEMON_LORD_ L Forearm
+    400036: DEMON_LORD_ L Hand
+    400038: DEMON_LORD_ L HorseLink
+    400040: DEMON_LORD_ L Thigh
+    400042: DEMON_LORD_ L Toe0
+    400044: DEMON_LORD_ L Toe01
+    400046: DEMON_LORD_ L UpperArm
+    400048: DEMON_LORD_ Neck
+    400050: DEMON_LORD_ Neck1
+    400052: DEMON_LORD_ Pelvis
+    400054: DEMON_LORD_ Ponytail1
+    400056: DEMON_LORD_ R Calf
+    400058: DEMON_LORD_ R Clavicle
+    400060: DEMON_LORD_ R Finger0
+    400062: DEMON_LORD_ R Finger01
+    400064: DEMON_LORD_ R Finger02
+    400066: DEMON_LORD_ R Finger1
+    400068: DEMON_LORD_ R Finger11
+    400070: DEMON_LORD_ R Finger12
+    400072: DEMON_LORD_ R Finger2
+    400074: DEMON_LORD_ R Finger21
+    400076: DEMON_LORD_ R Finger22
+    400078: DEMON_LORD_ R Finger3
+    400080: DEMON_LORD_ R Finger31
+    400082: DEMON_LORD_ R Finger32
+    400084: DEMON_LORD_ R Foot
+    400086: DEMON_LORD_ R Forearm
+    400088: DEMON_LORD_ R Hand
+    400090: DEMON_LORD_ R HorseLink
+    400092: DEMON_LORD_ R Thigh
+    400094: DEMON_LORD_ R Toe0
+    400096: DEMON_LORD_ R Toe01
+    400098: DEMON_LORD_ R UpperArm
+    400100: DEMON_LORD_ Spine
+    400102: DEMON_LORD_ Spine1
+    400104: DEMON_LORD_ Spine2
+    400106: DEMON_LORD_SWORD
+    400108: DEMON_LORD_WHIP_01
+    400110: DEMON_LORD_WHIP_010
+    400112: DEMON_LORD_WHIP_011
+    400114: DEMON_LORD_WHIP_02
+    400116: DEMON_LORD_WHIP_03
+    400118: DEMON_LORD_WHIP_04
+    400120: DEMON_LORD_WHIP_05
+    400122: DEMON_LORD_WHIP_06
+    400124: DEMON_LORD_WHIP_07
+    400126: DEMON_LORD_WHIP_08
+    400128: DEMON_LORD_WHIP_09
+    400130: DEMON_LORD_WHIP_HANDLE
+    400132: DEMON_LORD_WING_L_ARM
+    400134: DEMON_LORD_WING_L_FINGER_A_1
+    400136: DEMON_LORD_WING_L_FINGER_A_2
+    400138: DEMON_LORD_WING_L_FINGER_A_3
+    400140: DEMON_LORD_WING_L_FINGER_B_1
+    400142: DEMON_LORD_WING_L_FINGER_B_2
+    400144: DEMON_LORD_WING_L_FINGER_B_3
+    400146: DEMON_LORD_WING_L_FINGER_C_1
+    400148: DEMON_LORD_WING_L_FINGER_C_2
+    400150: DEMON_LORD_WING_L_FINGER_C_3
+    400152: DEMON_LORD_WING_L_FOREARM
+    400154: DEMON_LORD_WING_L_HAND
+    400156: DEMON_LORD_WING_R_ARM
+    400158: DEMON_LORD_WING_R_FINGER_A_1
+    400160: DEMON_LORD_WING_R_FINGER_A_2
+    400162: DEMON_LORD_WING_R_FINGER_A_3
+    400164: DEMON_LORD_WING_R_FINGER_B_1
+    400166: DEMON_LORD_WING_R_FINGER_B_2
+    400168: DEMON_LORD_WING_R_FINGER_B_3
+    400170: DEMON_LORD_WING_R_FINGER_C_1
+    400172: DEMON_LORD_WING_R_FINGER_C_2
+    400174: DEMON_LORD_WING_R_FINGER_C_3
+    400176: DEMON_LORD_WING_R_FOREARM
+    400178: DEMON_LORD_WING_R_HAND
+    400180: //RootNode
+    400182: root
+    7400000: Fly
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Fly
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: d11bc3e45a9a33342a8e42eac9f0630d,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

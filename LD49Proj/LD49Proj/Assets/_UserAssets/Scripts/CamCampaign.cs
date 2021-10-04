@@ -63,7 +63,7 @@ public class CamCampaign : MonoBehaviour
         Camera.main.transform.rotation = Quaternion.Lerp(zoomedOutRot, zoomedInRot, zoomAmount);
 
 
-        //SetDepthOfField();
+        SetDepthOfField();
 
     }
 
@@ -94,12 +94,12 @@ public class CamCampaign : MonoBehaviour
 
 
 
-        dof.focusDistance = new MinFloatParameter(focalDistance, 0f, true);
-        dof.focalLength = new ClampedFloatParameter(focalLength, 0f, 300f, true);
-        dof.aperture = new ClampedFloatParameter(aperture, 1f, 32f, true);
+        dof.focusDistance.SetValue(new MinFloatParameter(focalDistance, 0f, true));
+        dof.focalLength.SetValue(new ClampedFloatParameter(focalLength, 0f, 300f, true));
+        dof.aperture.SetValue(new ClampedFloatParameter(aperture, 1f, 32f, true));
 
-        postProcessVol.profile.TryGet<DepthOfField>(out dof);
+        //postProcessVol.profile.TryGet<DepthOfField>(out dof);
 
-        Debug.Log(dof.focusDistance + ", " + dof.focalLength + ", " + dof.aperture);
+        //Debug.Log(dof.focusDistance + ", " + dof.focalLength + ", " + dof.aperture);
     }
 }

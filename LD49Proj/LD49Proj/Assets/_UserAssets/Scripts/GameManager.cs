@@ -128,6 +128,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public static void DetermineIfWon(){
+        List<Character> chars = GetCharacters();
+        int sanityPar = chars.Count * 2;
+        int totalSanity = 0;
+        foreach(Character c in chars){
+            totalSanity += c.sanity;
+        }
+        if (totalSanity <= sanityPar){
+            instance.isGameWon = true;
+        }
+        else {
+            instance.isGameWon = false;
+        }
+    }
+    public static bool IsGameWon(){
+        return instance.isGameWon;
+    }
+
     
 
 
@@ -151,6 +169,10 @@ public class GameManager : MonoBehaviour
 
     // Name index for getting randomized names.
     public int currNameIndex = 0;
+
+
+
+    public bool isGameWon = false;
 
 
 
