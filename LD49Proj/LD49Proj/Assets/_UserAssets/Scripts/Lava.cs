@@ -5,17 +5,20 @@ using UnityEngine;
 public class Lava : MonoBehaviour
 {
     
-    private Material lavaMat;
+    private Material[] lavaMat;
 
     public Vector2 flowSpeed;
 
 
     private void Awake() {
-        lavaMat = GetComponent<Renderer>().material;
+        lavaMat = GetComponent<Renderer>().materials;
     }
 
 
     void Update() {
-        lavaMat.mainTextureOffset = Time.time * flowSpeed;
+        foreach (Material m in lavaMat){
+            m.mainTextureOffset = Time.time * flowSpeed;
+        }
     }
+        
 }

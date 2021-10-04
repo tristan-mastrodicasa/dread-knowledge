@@ -5,7 +5,7 @@ using UnityEngine;
 public class PersistCanvas : MonoBehaviour
 {
     // Don't Destroy On Load Singleton class. This class ensures continuity throughout the game.
-    private static PersistCanvas instance;
+    public static PersistCanvas instance;
     private void Awake() {
         if (instance == null){
             instance = this;

@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_UserAssets/Scenes/DefeatedScene/DefeatedScene.unity
     guid: ee63c5580d3051e41bcfc739d54ac015
+  - enabled: 1
+    path: Assets/_UserAssets/Scenes/BossBattle/BossBattle.unity
+    guid: f30911ed88813114cb057009c60f422f
   m_configObjects: {}
