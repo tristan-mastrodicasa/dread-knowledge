@@ -143,6 +143,7 @@ public class GameManager : MonoBehaviour
         }
     }
     public static bool IsGameWon(){
+        if (instance == null){return false;}
         return instance.isGameWon;
     }
 

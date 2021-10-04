@@ -819,8 +819,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba9434340a44428439f231fa4972c253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resultText: {fileID: 0}
-  screenDuration: 0
+  resultText: {fileID: 1324782086}
+  screenDuration: 10
 --- !u!4 &161512759
 Transform:
   m_ObjectHideFlags: 0

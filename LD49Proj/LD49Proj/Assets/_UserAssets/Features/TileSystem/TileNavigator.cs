@@ -17,6 +17,7 @@ namespace TileSystem {
         }
 
 
+
         private bool isAdvancing = false;
 
         public void MoveForward(int numberOfTilesForward) {
@@ -26,6 +27,7 @@ namespace TileSystem {
         }
 
         void Update() {
+
             if(tilesToMoveForward != 0) {
                 if (currentTile.nextTile) {
                     Vector3 positionOfNextTilesAnchor = currentTile.nextTile.tileAnchor.transform.position;
@@ -40,7 +42,7 @@ namespace TileSystem {
                     tilesToMoveForward = 0;
 
                     GameManager.DetermineIfWon();
-                    FadeIn.FadeToScene("EndGame");
+                    FadeIn.FadeToScene("BossBattle");
                 }
             }
             else {
