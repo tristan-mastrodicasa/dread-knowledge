@@ -30,12 +30,11 @@ public class DraggableName : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
 
 
     public void OnPointerDown(PointerEventData eventData){
-        Debug.Log("Here we go.");
+        
     }
 
 
     public void OnBeginDrag(PointerEventData eventData){
-        Debug.Log("Begin drag.");
         canvasGroup.blocksRaycasts = false;
     }
 
@@ -53,8 +52,22 @@ public class DraggableName : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
         if (results.Count <= 0){
             ReturnToSlot();
         }
+        else {
+            // If no slot is involved, return to original slot.
+            bool acceptable = false;
+            foreach (RaycastResult r in results){
+                if (r.gameObject.GetComponent<RoleSlot>() != null){
+                    acceptable = true;
+                    break;
+                }
+            }
 
-        Debug.Log("End drag.");
+            if (!acceptable){
+                ReturnToSlot();
+            }
+        }
+
+
         canvasGroup.blocksRaycasts = true;
     }
 

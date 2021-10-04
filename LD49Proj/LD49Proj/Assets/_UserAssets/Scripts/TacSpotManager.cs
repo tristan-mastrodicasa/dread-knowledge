@@ -20,4 +20,24 @@ public class TacSpotManager : MonoBehaviour
         renderers[c.modelIndex].gameObject.SetActive(true);
         
     }
+
+
+    public CharIndicator charIndicator;
+    private Animator charAnim;
+    
+    private void Awake() {
+        charIndicator = GetComponentInChildren<CharIndicator>();
+        charAnim = GetComponentInChildren<Animator>();
+    }
+
+
+
+    private void Update() {
+        int spotIndex = RoleManager.instance.spots.IndexOf(this);
+        DraggableName d = RoleManager.instance.draggableNames[spotIndex];
+        Character c = d.character;
+        if (c == null){return;}
+        int sanity = c.sanity;
+        charAnim.SetInteger("PoseIndex", sanity);
+    }
 }

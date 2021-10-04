@@ -7,13 +7,14 @@ public class GameManager : MonoBehaviour
 {
 
     // Don't Destroy On Load Singleton class. This class ensures continuity throughout the game.
-    private static GameManager instance;
+    public static GameManager instance;
     private void Awake() {
         if (instance == null){
             instance = this;
 
             DontDestroyOnLoad(this.gameObject);
-
+            
+            ShuffleNames();
             InitializeCharacters();
             InitializeTileTypes();
         }
@@ -32,11 +33,11 @@ public class GameManager : MonoBehaviour
     }
 
     public static void LoadCampaignScene(){
-        SceneManager.LoadScene("Overworld");
+        FadeIn.FadeToScene("Overworld");
     }
 
     public static void LoadTacticalScene(){
-        SceneManager.LoadScene("TacticalMap");
+        FadeIn.FadeToScene("TacticalMap");
     }
 
 
@@ -55,23 +56,35 @@ public class GameManager : MonoBehaviour
     }
 
     public void InitializeTileTypes(){
-        List<TileSystem.Tile> tiles = TileManager.instance.tiles;
+        int tileCount = 76;
+
         tileTypeList = new List<TileManager.TileType>();
         
-        for (int i = 0; i < tiles.Count; i++){
-            if (i == 0 || i == tiles.Count - 1){
+        for (int i = 0; i < tileCount; i++){
+            if (i == 0 || i == tileCount - 1){
                 tileTypeList.Add(TileManager.TileType.Normal);
                 continue;
             }
 
             // Randomly determine what kind of tile should be generated.
-            int roll = Random.Range(0, 8);
-            if (roll < 4){tileTypeList.Add(TileManager.TileType.Normal);}
-            else if (roll == 4){tileTypeList.Add(TileManager.TileType.Forest);}
-            else if (roll == 5){tileTypeList.Add(TileManager.TileType.Treasure);}
-            else if (roll == 6){tileTypeList.Add(TileManager.TileType.Monsters);}
-            else if (roll == 7){tileTypeList.Add(TileManager.TileType.Aberration);}
+            int roll = Random.Range(0, 7);
+            if (roll < 3){tileTypeList.Add(TileManager.TileType.Normal);}
+            else if (roll == 3){tileTypeList.Add(TileManager.TileType.Forest);}
+            else if (roll == 4){tileTypeList.Add(TileManager.TileType.Treasure);}
+            else if (roll == 5){tileTypeList.Add(TileManager.TileType.Monsters);}
+            else if (roll == 6){tileTypeList.Add(TileManager.TileType.Aberration);}
+            else {tileTypeList.Add(TileManager.TileType.Normal);}
 
+        }
+    }
+
+    public void ShuffleNames(){
+        for (int i = 0; i < characterNamesList.Count; i++){
+            int r = Random.Range(i, characterNamesList.Count);
+
+            string temp = characterNamesList[r];
+            characterNamesList[r] = characterNamesList[i];
+            characterNamesList[i] = temp;
         }
     }
 
@@ -97,6 +110,13 @@ public class GameManager : MonoBehaviour
         return instance.currTile;
     }
 
+    public static void SetPushedOn(bool pushedOn){
+        instance.pushedOn = pushedOn;
+    }
+    public static bool GetPushedOn(){
+        return instance.pushedOn;
+    }
+
 
     public static void KillCharacter(Character character){
         instance.characters.Remove(character);
@@ -104,7 +124,7 @@ public class GameManager : MonoBehaviour
         instance.deadCharacters.Add(character);
 
         if (instance.characters.Count == 0) {
-            SceneManager.LoadScene("DefeatedScene");
+            FadeIn.FadeToScene("DefeatedScene");
         }
     }
 
@@ -124,6 +144,8 @@ public class GameManager : MonoBehaviour
 
     // Current tile index.
     public int currTile = 0;
+    public bool pushedOn = false;
+
     // Board tile types.
     public List<TileManager.TileType> tileTypeList;
 
@@ -174,18 +196,13 @@ public class Character {
         if (!isAlive){return;}
 
         sanity = Mathf.Min(sanity + difference, 6);
-
-        while (sanity <= 0){
-            AttackOthers();
-            sanity++;
-        }
     }
 
-    public void AttackOthers(){
+    /*public void AttackOthers(){
         if (!isAlive){return;}
 
         GameManager.GetCharacters()[Random.Range(0,GameManager.GetCharacters().Count)].ChangeHealth(-2);
-    }
+    }*/
 
 
 

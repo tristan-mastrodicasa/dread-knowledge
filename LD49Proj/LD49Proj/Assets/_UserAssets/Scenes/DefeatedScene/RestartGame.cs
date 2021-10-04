@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class RestartGame : MonoBehaviour
 {
     public void Restart() {
-        // todo: reset the game state
-        SceneManager.LoadScene("Overworld", LoadSceneMode.Single);
+        Destroy(GameManager.instance);
+        FadeIn.FadeToScene("Overworld");
     }
 }

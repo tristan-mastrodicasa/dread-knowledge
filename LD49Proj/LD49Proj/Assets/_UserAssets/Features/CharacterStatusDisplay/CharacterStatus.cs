@@ -7,26 +7,28 @@ using TMPro;
 public class CharacterStatus : MonoBehaviour
 {
     public int characterIndex;
-    public GameManager gameManager;
     public Slider healthSlider;
     public Slider sanitySlider;
     public TextMeshProUGUI characterName;
+
+    public float sliderSpeed = 2f;
 
     void Start() {
         StartCoroutine("UpdateDisplay");
     }
 
-    IEnumerator UpdateDisplay() {
-        while (true) {
-            if(gameManager.characters.Count > characterIndex) {
-                characterName.SetText(gameManager.characters[characterIndex].characterName);
-                healthSlider.value = gameManager.characters[characterIndex].health;
-                sanitySlider.value = gameManager.characters[characterIndex].sanity;
-            } else {
-                gameObject.SetActive(false);
-            }
+    private void Update() {
+        UpdateDisplay();
+    }
 
-            yield return new WaitForSeconds(1f);
+    void UpdateDisplay() {
+        List<Character> charList = GameManager.GetCharacters();
+        if(charList.Count > characterIndex) {
+            characterName.SetText(charList[characterIndex].characterName);
+            healthSlider.value = Mathf.MoveTowards(healthSlider.value, charList[characterIndex].health, sliderSpeed * Time.deltaTime);
+            sanitySlider.value = Mathf.MoveTowards(sanitySlider.value, charList[characterIndex].sanity, sliderSpeed * Time.deltaTime);
+        } else {
+            gameObject.SetActive(false);
         }
     }
 }

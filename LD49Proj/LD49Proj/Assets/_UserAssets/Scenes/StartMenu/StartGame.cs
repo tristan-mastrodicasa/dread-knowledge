@@ -6,6 +6,6 @@ using UnityEngine.SceneManagement;
 public class StartGame : MonoBehaviour
 {
     public void LoadMainGame() {
-        SceneManager.LoadScene("Overworld", LoadSceneMode.Single);
+        FadeIn.FadeToScene("Overworld");
     }
 }

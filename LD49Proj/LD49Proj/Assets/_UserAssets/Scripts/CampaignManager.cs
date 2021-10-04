@@ -36,9 +36,16 @@ public class CampaignManager : MonoBehaviour
         PopulateDeis();
         MoveDeisToCurrTile();
         TileManager.PopulateGameTiles();
+
+        GameManager.SetPushedOn(false);
     }
 
     public void ReturnToTactical(){
-        SceneManager.LoadScene("TacticalMap");
+        GameManager.LoadTacticalScene();
+    }
+
+    public void PushOn(){
+        dais.MoveForward(1);
+        GameManager.SetPushedOn(true);
     }
 }
